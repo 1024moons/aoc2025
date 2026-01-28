@@ -14,7 +14,8 @@ void part1(){
         std::stringstream ss(line);
         std::string token;
         while (std::getline(ss, token, ',')){
-            std::cout << token << std::endl;
+            unsigned int pos = token.find('-');
+            std::cout << token.substr(0, pos) << " " << token.substr(pos + 1) << std::endl;
         }
         std::cout << "part 1:" << number_of_zeroes << std::endl;
     } else {
